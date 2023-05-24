@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.testassignment.view_model.VerifyOtpViewModel" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".view.PhoneNumberActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.phoneNumber}"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="30dp"
+            android:textSize="18sp"
+            android:drawableEnd="@drawable/ic_pencil"
+            android:drawablePadding="8dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:text="Enter The OTP"
+            android:layout_marginStart="30dp"
+            android:textSize="30sp"
+            android:fontFamily="@font/inter_bold"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"/>
+
+
+        <EditText
+            android:layout_width="98dp"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="16dp"
+            android:text="@={viewModel.otpStr}"
+            android:singleLine="true"
+            android:inputType="number"
+            android:background="@drawable/rect_rounded_grey_stroke_10dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/black"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="224dp"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:onClick="@{()->viewModel.verifyOtp()}"
+                android:fontFamily="@font/inter_bold"
+                android:background="@drawable/rect_rounded_yellow_solid_20dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:59"
+                android:textSize="18sp"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/black"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

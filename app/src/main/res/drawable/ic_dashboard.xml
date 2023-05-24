@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="19dp"
+    android:height="22dp"
+    android:viewportWidth="19"
+    android:viewportHeight="22">
+  <path
+      android:pathData="M0,0h19v21.235h-19z"
+      android:fillColor="@color/black"/>
+
+  <!--url(#pattern0) this is what i am getting when i am trying to extract the assets-->
+
+  <group>
+    <clip-path
+        android:pathData="M0,0h19v21.235h-19z"/>
+    <path
+        android:pathData="M0,0h19v21.235h-19z"
+        android:fillColor="#9B9B9B"/>
+  </group>
+</vector>
